@@ -115,7 +115,7 @@ namespace OOPGDC
 
         private static int GetRandomValue()
         {
-            return new Random().Next(0, 14);
+            return new Random().Next(1, 14);
         }
 
         override

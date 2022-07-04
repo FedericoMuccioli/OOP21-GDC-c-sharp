@@ -12,7 +12,6 @@ namespace OOP21
     [TestFixture]
     class TestHand
 {
-        private Card.Suits[] SuitsValues = (Suits[])Enum.GetValues(typeof(Suits));
         private Hand hand;
 
         [SetUp]
