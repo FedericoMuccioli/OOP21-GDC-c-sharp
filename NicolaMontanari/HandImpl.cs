@@ -83,7 +83,7 @@ namespace OOPGDC
         }
         public Card GetLastCard()
         {
-            return this.GetLastCard();
+            return this.ElementAt(this.Size()-1);
         }
     }
 }

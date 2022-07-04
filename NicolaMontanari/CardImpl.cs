@@ -62,7 +62,7 @@ namespace OOPGDC
 
         public int GetValue()
         {
-            return this.card.Item2;
+            return (this.card.Item2 >= 10) ? 10 : this.card.Item2;
         }
 
         public Image GetImg()
