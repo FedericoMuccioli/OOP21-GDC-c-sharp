@@ -4,60 +4,57 @@ using System.Text;
 
 namespace OOPGDC
 {
+    /// <summary>
+    /// Interface for managing decks of cards.
+    /// </summary>
     interface Deck
     {
-        /**
-         * Fill the deck with cards.
-         */
+        /// <summary>
+        /// Fill the deck with cards.
+        /// </summary>
         void GenerateDeck();
 
-        /**
-         * Remove a card from a deck.
-         * 
-         * @param card Card to be removed.
-         * @return true if the card has been successfully removed.
-         */
+        /// <summary>
+        /// Remove a card from a deck.
+        /// </summary>
+        /// <param name="card"> Card to be removed. </param>
+        /// <returns> True if the card has been successfully removed. </returns>
         Boolean RemovePreciseCard(Card card);
 
-        /**
-         * Remove a random card from the deck.
-         * 
-         * @return true if the card has been successfully removed.
-         */
+        /// <summary>
+        /// Remove a random card from the deck.
+        /// </summary>
+        /// <returns> True if the card has been successfully removed. </returns>
         Boolean RemoveRandomCard();
 
-        /**
-         * Remove and return a card from the deck.
-         * 
-         * @param card the card that needs to be removed.
-         * @return the card removed.
-         */
+        /// <summary>
+        /// Remove and return a card from the deck.
+        /// </summary>
+        /// <param name="card"> The card that needs to be removed.</param>
+        /// <returns> The card removed.</returns>
         Card DrawPreciseCard(Card card);
 
-        /**
-         * Remove and return a random card from the deck.
-         * 
-         * @return the card removed.
-         */
+        /// <summary>
+        /// Remove and return a random card from the deck.
+        /// </summary>
+        /// <returns> The card removed. </returns>
         Card DrawRandomCard();
 
-        /**
-         * Reinitialize the deck with new cards.
-         */
+        /// <summary>
+        /// Reinitialize the deck with new cards.
+        /// </summary>
         void Shuffle();
 
-        /**
-         * Getter nDecks.
-         * @return the numbers of decks.
-         */
+        /// <summary>
+        /// Getter nDecks.
+        /// </summary>
+        /// <returns> The numbers of decks. </returns>
         int GetnDecks();
 
-        /**
-         * getter size. 
-         * @return the size of the deck.
-         */
+        /// <summary>
+        /// Getter size.
+        /// </summary>
+        /// <returns> The size of the deck.</returns>
         int Size();
-
-
     }
 }

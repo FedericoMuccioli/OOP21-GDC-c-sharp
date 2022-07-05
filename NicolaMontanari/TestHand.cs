@@ -9,6 +9,9 @@ using static OOPGDC.Card;
 
 namespace OOP21
 {
+    /// <summary>
+    /// Test for Hand class.
+    /// </summary>
     [TestFixture]
     class TestHand
 {

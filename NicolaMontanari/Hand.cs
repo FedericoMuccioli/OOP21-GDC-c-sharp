@@ -4,72 +4,66 @@ using System.Text;
 
 namespace OOPGDC
 {
+    /// <summary>
+    /// Interface that manages the methods of managing the hands of the players and the dealer.
+    /// </summary>
     interface Hand
     {
 
-        /**
-         * Add a card to the hand. 
-         * 
-         * @param c card that will be added.
-         * @return true if the card has been added, false otherwise.
-         */
+        /// <summary>
+        /// Add a card to the hand. 
+        /// </summary>
+        /// <param name="c"> Card that will be added. </param>
+        /// <returns> True if the card has been added, false otherwise. </returns>
         Boolean AddCard(Card c);
 
-        /**
-         * Remove a card to the hand.
-         * 
-         * @param c card that will be removed.
-         * @return true if the card has been removed, false otherwise. 
-         */
+        /// <summary>
+        /// Remove a card to the hand.
+        /// </summary>
+        /// <param name="c"> Card that will be removed. </param>
+        /// <returns> True if the card has been removed, false otherwise. </returns>
         Boolean RemoveCard(Card c);
 
-
-        /**
-         * Calculate the points of the hand.
-         */
+        /// <summary>
+        /// Calculate the points of the hand.
+        /// </summary>
         void CalculatePoints();
 
-        /**
-         * Getter card.
-         * 
-         * @param index index of the card in the hand.
-         * @return the card requested.
-         */
+        /// <summary>
+        /// Getter card.
+        /// </summary>
+        /// <param name="index"> Index of the card in the hand. </param>
+        /// <returns> The card requested. </returns>
         Card GetCard(int index);
 
-        /**
-         * Getter the last card of the hand.
-         * 
-         * @return the card requested.
-         */
+        /// <summary>
+        /// Getter the last card of the hand.
+        /// </summary>
+        /// <returns> The card requested. </returns>
         Card GetLastCard();
 
-        /**
-         * Getter of the hand. 
-         * 
-         * @return the whole hand. 
-         */
+        /// <summary>
+        /// Getter of the hand. 
+        /// </summary>
+        /// <returns> The whole hand. </returns>
         Hand GetHand();
 
-        /**
-         * Getter of points for Baccarat Game. 
-         * 
-         * @return an int with baccarat points.
-         */
+        /// <summary>
+        /// Getter of points for Baccarat Game. 
+        /// </summary>
+        /// <returns> An int with baccarat points. </returns>
         int GetBaccaratPoints();
 
-        /**
-         * Getter of points for Blackjack Game. 
-         * 
-         * @return an int with Blackjack points.
-         */
+        /// <summary>
+        /// Getter of points for Blackjack Game. 
+        /// </summary>
+        /// <returns> An int with Blackjack points. </returns>
         int GetBlackJackPoints();
 
-        /**
-         * Getter size of the hand.
-         * 
-         * @return amount of elements in the hand. 
-         */
+        /// <summary>
+        /// Getter size of the hand.
+        /// </summary>
+        /// <returns> Amount of elements in the hand. </returns>
         int Size();
     }
 }

@@ -9,12 +9,14 @@ using static OOPGDC.Card;
 
 namespace OOP21
 {
+    /// <summary>
+    /// Test for Card class.
+    /// </summary>
     [TestFixture]
     class TestCard
     {
         private Card card;
         private readonly Card.Suits[] SuitsValues = (Suits[])Enum.GetValues(typeof(Suits));
-
 
         private Boolean CheckEnum(Suits s)
         {
@@ -28,7 +30,7 @@ namespace OOP21
             return false;
         }
 
-        private Boolean CheckPoints(int points)
+        private static Boolean CheckPoints(int points)
         {
             return (points <= 10 && points > 0);
         }

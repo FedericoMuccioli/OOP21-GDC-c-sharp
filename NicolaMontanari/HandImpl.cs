@@ -5,9 +5,11 @@ using System.Text;
 
 namespace OOPGDC
 {
+    /// <summary>
+    /// Class that implements the methods of handling the hands of the players and the dealer.
+    /// </summary>
     class HandImpl : LinkedList<Card>, Hand
     {
-
         private int points;
 
         public HandImpl()
@@ -50,7 +52,6 @@ namespace OOPGDC
             }
         }
 
-
         public Card GetCard(int index)
         {
             return this.ElementAt(index);
@@ -71,7 +72,6 @@ namespace OOPGDC
             return this.points % 10;
         }
 
-
         public int Size()
         {
             int i = 0;
@@ -81,6 +81,7 @@ namespace OOPGDC
             }
             return i;
         }
+
         public Card GetLastCard()
         {
             return this.ElementAt(this.Size()-1);

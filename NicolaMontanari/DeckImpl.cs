@@ -6,11 +6,12 @@ using static OOPGDC.Card;
 
 namespace OOPGDC
 {
+    /// <summary>
+    /// Class that implements card deck management methods.
+    /// </summary>
     class DeckImpl : ArrayList, Deck
     {
-
         private readonly int ndeck;
-
 
         public DeckImpl(int ndeck)
         {
@@ -31,13 +32,11 @@ namespace OOPGDC
             }
         }
 
-
         public void Shuffle()
         {
             this.RemoveRange(0, this.Size());
             GenerateDeck();
         }
-
         
         public Boolean RemovePreciseCard(Card card)
         {
@@ -54,7 +53,6 @@ namespace OOPGDC
             return false;
         }
 
-        
         public Boolean RemoveRandomCard()
         {
             if (this.Size() != 0)
@@ -118,7 +116,5 @@ namespace OOPGDC
             }
             return counter;
         }
-
-
     }
 }

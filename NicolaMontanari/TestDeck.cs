@@ -4,10 +4,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using NUnit.Framework;
+using OOPGDC;
 using static OOPGDC.Card;
 
-namespace OOPGDC
+namespace OOP21
 {
+    /// <summary>
+    /// Test for Deck class.
+    /// </summary>
     [TestFixture]
     public class TestDeck
     {
@@ -29,7 +33,7 @@ namespace OOPGDC
 
 
 
-        private int checknCardContained(Card c)
+        private int ChecknCardContained(Card c)
         {
             ArrayList List = (ArrayList) this.Deck;
             int k = 0;
@@ -82,10 +86,10 @@ namespace OOPGDC
             {
                 Assert.IsTrue(this.Deck.RemovePreciseCard(cardremoved));
                 Assert.AreEqual(this.Deck.Size(), (Ndeck * 13 * 4) - i - 1);
-                Assert.AreEqual(checknCardContained(cardremoved), 5 - i);
+                Assert.AreEqual(ChecknCardContained(cardremoved), 5 - i);
             }
             Assert.IsFalse(this.Deck.RemovePreciseCard(cardremoved));
-            Assert.AreEqual(checknCardContained(cardremoved), 0);
+            Assert.AreEqual(ChecknCardContained(cardremoved), 0);
             Assert.AreEqual(this.Deck.Size(), (Ndeck * 13 * 4) - 6);
         }
 
@@ -106,10 +110,10 @@ namespace OOPGDC
                 Assert.AreEqual(card2.GetSuit(), Suits.DIAMONDS);
                 Assert.AreEqual(card2.GetCard().Item2, 11);
                 Assert.AreEqual(this.Deck.Size(), (Ndeck * 13 * 4) - i - 1);
-                Assert.AreEqual(checknCardContained(cardremoved), 5 - i);
+                Assert.AreEqual(ChecknCardContained(cardremoved), 5 - i);
             }
             Assert.AreEqual(this.Deck.DrawPreciseCard(cardremoved), null);
-            Assert.AreEqual(checknCardContained(cardremoved), 0);
+            Assert.AreEqual(ChecknCardContained(cardremoved), 0);
             Assert.AreEqual(this.Deck.Size(), (Ndeck * 13 * 4) - 6);
         }
 

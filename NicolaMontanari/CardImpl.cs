@@ -4,12 +4,14 @@ using static OOPGDC.Card;
 
 namespace OOPGDC
 {
+    /// <summary>
+    /// Class that models the methods for handling a single card.
+    /// </summary>
     public class CardImpl : Card
     {
         private readonly Tuple<Suits, int> card;
         private Boolean facedown;
         private Image img;
-
 
         /// <summary>
         ///  Generate a random card
@@ -50,11 +52,6 @@ namespace OOPGDC
             this.facedown = false;
         }
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         public Suits GetSuit()
         {
             return this.card.Item1;
@@ -85,7 +82,6 @@ namespace OOPGDC
             return (this.card.Item1 == Suits.DIAMONDS || this.card.Item1 == Suits.HEARTS);
         }
 
-
         public void TurnOver()
         {
             if (this.facedown)
@@ -111,7 +107,6 @@ namespace OOPGDC
         {
             return (Suits) Enum.GetValues(typeof(Suits)).GetValue(new Random().Next(0,4));
         }
-        
 
         private static int GetRandomValue()
         {
@@ -142,7 +137,5 @@ namespace OOPGDC
             Card other = (Card)obj;
             return Object.Equals(this.card.Item1, other.GetSuit()) && Object.Equals(this.card.Item2, other.GetValue());
         }
-
-
     }
 }
