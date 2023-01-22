@@ -7,5 +7,5 @@
 ___
 
 ## To visualize the main project:
-#### Go to: NIK4658/OOP21-GDC
+#### Go to: FedericoMuccioli/OOP21-GDC
 #### Or Simply [Click here.](https://github.com/NIK4658/OOP21-GDC)
